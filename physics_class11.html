@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics Class 11</title>
     <style>
-          body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -34,33 +34,87 @@
             margin: 0.5rem 0;
         }
 
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff; /* White text */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #357ABD; /* Darker blue */
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4A90E2; /* Light blue */
+            color: #ffffff; /* White text */
+            border: none;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            border-radius: 10px; /* Smooth edges */
+        }
+
+        button:hover {
+            background-color: #357ABD; /* Darker blue */
+        }
+
+        .lecture-buttons {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        .lecture-buttons button {
+            background-color: #333333; /* Dark gray */
+            color: #ffffff; /* White text */
+        }
+
+        .lecture-buttons button:hover {
+            background-color: #555555; /* Lighter gray */
+        }
+
+footer {
+            background-color: #4A90E2; /* Light blue */
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
-    <script>
-        // Function to check if the user has verified in the last 24 hours
-        function checkVerification() {
-            const lastVerified = localStorage.getItem('verifiedTime');
-            const currentTime = new Date().getTime();
-            return lastVerified && (currentTime - lastVerified) <= (24 * 60 * 60 * 1000);
-        }
-
-        // Function to handle redirection if not verified
-        function redirectToHomeIfNotVerified() {
-            if (!checkVerification()) {
-                window.location.href = 'index.html'; // Redirect to home if not verified
-            }
-        }
-
-        // Check verification status on page load
-        document.addEventListener('DOMContentLoaded', (event) => {
-            redirectToHomeIfNotVerified();
-        });
-    </script>
 </head>
 <body>
     <header>
-        <h1>Physics Class 11</h1>
+          <h1> ᴘʜʏsɪᴄs - ᴀʟʟᴇɴ  </h1>
         <nav>
-                                    <ul class="nav-line">
+            <ul class="nav-line">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="https://t.me/Team_Delta_Official" target="_blank"> Telegram </a></li>
                 <li><a href="https://t.me/Hii_Admin_Bot" target="_blank">Contact</a></li>
@@ -68,7 +122,7 @@
         </nav>
     </header>
     <main>
-                        <div class="buttons">
+        <div class="buttons">
             <button onclick="showLectures('Unit Dimensions & Error')">Unit Dimensions & Error</button>
             <div id="Unit Dimensions & Error" class="lecture-buttons">
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e690553b11229b711c2486')">Units Dimensions And Error 1</button>
@@ -96,6 +150,7 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e697ac3b11229b711c2499')">Vector 10</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e697de3b11229b711c249a')">Vector 11</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e698113b11229b711c249b')">Vector 12</button>
+
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6983b3b11229b711c249c')">Vector 13</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6986d3b11229b711c249d')">Vector 14</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e698973b11229b711c249e')">Vector 15</button>
@@ -127,6 +182,7 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e699a33b11229b711c24b4')">Kinematics 22</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e699a93b11229b711c24b5')">Kinematics 23</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e699a93b11229b711c24b6')">Kinematics 24</button>
+
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e699d53b11229b711c24b7')">Kinematics 25</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e699da3b11229b711c24b8')">Kinematics 26</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e699da3b11229b711c24ba')">Kinematics 27</button>
@@ -143,6 +199,7 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e69d873b11229b711c24bf')">Newton's laws of Motion 4</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e69d883b11229b711c24c2')">Newton's laws of Motion 5</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e69d883b11229b711c24c1')">Newton's laws of Motion 6</button>
+
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e69d8a3b11229b711c24c3')">Newton's laws of Motion 7</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e69d8f3b11229b711c24c4')">Newton's laws of Motion 8</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e69d8f3b11229b711c24c5')">Newton's laws of Motion 9</button>
@@ -176,6 +233,7 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a1d13b11229b711c24d5')">Circular motion 5</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a1d13b11229b711c24da')">Circular motion 6</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a1d93b11229b711c24db')">Circular motion 7</button>
+
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a1db3b11229b711c24dc')">Circular motion 8</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a1db3b11229b711c24dd')">Circular motion 9</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a1db3b11229b711c24de')">Circular motion 10</button>
@@ -208,6 +266,7 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a6fe3b11229b711c24f3')">Centre of mass 3</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a6fe3b11229b711c24f1')">Centre of mass 4</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a6fe3b11229b711c24f2')">Centre of mass 5</button>
+
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a6fe3b11229b711c24f4')">Centre of mass 6</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a7063b11229b711c24f5')">Centre of mass 7</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a7063b11229b711c24f6')">Centre of mass 8</button>
@@ -238,11 +297,13 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9bd3b11229b711c250b')">Rotational Dynamics 12</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9bd3b11229b711c250c')">Rotational Dynamics 13</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9be3b11229b711c250d')">Rotational Dynamics 14</button>
+
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9e93b11229b711c250e')">Rotational Dynamics 15</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9ea3b11229b711c250f')">Rotational Dynamics 16</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9ea3b11229b711c2510')">Rotational Dynamics 17</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9ef3b11229b711c2511')">Rotational Dynamics 18</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9ef3b11229b711c2512')">Rotational Dynamics 19</button>
+
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9f43b11229b711c2513')">Rotational Dynamics 20</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9f43b11229b711c2514')">Rotational Dynamics 21</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6a9f43b11229b711c2515')">Rotational Dynamics 22</button>
@@ -272,7 +333,6 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6acef3b11229b711c2529')">Thermal Property Of Matter 19</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6acef3b11229b711c252a')">Thermal Property Of Matter 20</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6acf03b11229b711c252b')">Thermal Property Of Matter 21</button>
-
 
 </div>
             <button onclick="showLectures('kinetic-theory')">Kinetic Theory of Gases</button>
@@ -310,12 +370,44 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6b3403b11229b711c2542')">Fluid mechanics 13</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6b3403b11229b711c2543')">Fluid mechanics 14</button>
 
-            </div>
+</div>
         </div>
-        
     </main>
     <footer>
-        <p>© 2024 Team Delta Official</p>
+        © 2024 Physics Class 11
     </footer>
+    <script>
+        function showLectures(chapterId) {
+            // Hide all lecture buttons
+            const lectureDivs = document.querySelectorAll('.lecture-buttons');
+            lectureDivs.forEach(div => div.style.display = 'none');
+
+            // Show the selected chapter's lecture buttons
+            document.getElementById(chapterId).style.display = 'flex';
+        }
+    </script>
+        <section id="tips">
+            <h2>How to Clear JEE Main and Advanced</h2>
+            <p>Preparing for JEE Main and Advanced requires a strategic approach. Here are some tips to help you succeed:</p>
+            <ul>
+                <li>Follow a structured study plan and stick to it.</li>
+                <li>Focus on understanding concepts rather than rote learning.</li>
+                <li>Practice regularly with previous years' papers and mock tests.</li>
+                <li>Manage your time effectively during preparation and exams.</li>
+                <li>Stay consistent and avoid procrastination.</li>
+            </ul>
+            <h2>How to Cover Backlogs</h2>
+            <p>Backlogs can be challenging, but with the right strategy, you can overcome them:</p>
+            <ul>
+                <li>Identify the important topics and prioritize them.</li>
+                <li>Allocate specific time slots in your schedule to cover backlogs.</li>
+                <li>Use quality resources and focus on understanding the concepts.</li>
+                <li>Regularly revise and test yourself to ensure retention.</li>
+                <li>Stay motivated and avoid distractions.</li>
+            </ul>
+            <h3>This All Stream Link Made By Harshita So Thanks Her </h3> <li><a href="https://t.me/Team_Delta_Official/126" target="_blank">ᴛʜᴀɴᴋs ʜᴇʀ ʜᴇʀᴇ</a></li> <br> <br> <br>
+        </section>
+       
+    </main>
 </body>
 </html>
