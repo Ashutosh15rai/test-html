@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics - Team Delta Official</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to check if the user has verified within the last 24 hours
+        function checkVerification() {
+            const lastVerified = localStorage.getItem('lastVerified');
+            const currentTime = new Date().getTime();
+
+            // If the user hasn't verified or it's been more than 24 hours
+            if (!lastVerified || currentTime - lastVerified > 24 * 60 * 60 * 1000) {
+                // Redirect to the shortened link for verification
+                window.location.href = 'https://instantearn.in/PSX4';
+            }
+        }
+
+        // Call this function when the page is loaded
+        function verifyAccess() {
+            const currentTime = new Date().getTime();
+            localStorage.setItem('lastVerified', currentTime);
+        }
+    </script>
 </head>
-<body>
+<body onload="checkVerification()">
     <header>
-        <h1>Physics - Team Delta Official</h1>
+        <h1>Chemistry - Team Delta Official</h1>
         <nav>
             <ul class="nav-line">
                 <li><a href="index.html">Home</a></li>
@@ -21,8 +40,8 @@
         <section id="classes">
             <h2>Select Your Class</h2>
             <div class="buttons">
-                <button onclick="location.href='physics_class11.html">Class 11</button>
-                <button onclick="location.href='class12.html'">Class 12</button>
+                <button onclick="verifyAccess(); location.href='physics_class11.html'">Class 11</button>
+                <button onclick="verifyAccess(); location.href='class12.html'">Class 12</button>
             </div>
         </section>
         <section id="tips">
