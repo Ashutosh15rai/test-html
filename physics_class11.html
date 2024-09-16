@@ -99,7 +99,7 @@
             background-color: #555555; /* Lighter gray */
         }
 
-footer {
+        footer {
             background-color: #4A90E2; /* Light blue */
             color: #ffffff; /* White text */
             text-align: center;
@@ -109,14 +109,41 @@ footer {
             bottom: 0;
         }
     </style>
+
+    <script>
+        // Check verification status
+        function checkVerification() {
+            const lastVerified = localStorage.getItem('lastVerified');
+            const currentTime = new Date().getTime();
+            const oneDay = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+            // If lastVerified is not set or it's been more than 24 hours, show a popup
+            if (!lastVerified || (currentTime - lastVerified) > oneDay) {
+                if (confirm("You are not verified! Please verify yourself to use this page.")) {
+                    window.location.href = "https://instantearn.in/aXNk"; // Redirect to your shortened link for verification
+                }
+            }
+        }
+
+        // Set verification timestamp in localStorage after successful verification
+        function setVerified() {
+            const currentTime = new Date().getTime();
+            localStorage.setItem('lastVerified', currentTime); // Store the current time as the last verified time
+        }
+
+        // Run verification check when the page loads
+        window.onload = function() {
+            checkVerification();
+        };
+    </script>
 </head>
 <body>
     <header>
-          <h1> ᴘʜʏsɪᴄs - ᴀʟʟᴇɴ  </h1>
+        <h1>ᴘʜʏsɪᴄs - ᴀʟʟᴇɴ</h1>
         <nav>
             <ul class="nav-line">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="https://t.me/Team_Delta_Official" target="_blank"> Telegram </a></li>
+                <li><a href="https://t.me/Team_Delta_Official" target="_blank">Telegram</a></li>
                 <li><a href="https://t.me/Hii_Admin_Bot" target="_blank">Contact</a></li>
             </ul>
         </nav>
@@ -125,16 +152,16 @@ footer {
         <div class="buttons">
             <button onclick="showLectures('Unit Dimensions & Error')">Unit Dimensions & Error</button>
             <div id="Unit Dimensions & Error" class="lecture-buttons">
-<button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e690553b11229b711c2486')">Units Dimensions And Error 1</button>
-<button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e690d43b11229b711c2487')">Units Dimensions And Error 2</button>
-<button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e691253b11229b711c2488')">Units Dimensions And Error 3</button>
-<button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6917b3b11229b711c2489')">Units Dimensions And Error 4</button>
-<button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e691973b11229b711c248a')">Units Dimensions And Error 5</button>
-<button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6947b3b11229b711c248e')">Units Dimensions And Error 6</button>
-<button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e692123b11229b711c248d')">Units Dimensions And Error 7</button>
-<button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e694f03b11229b711c248f')">Units Dimensions And Error 8</button>
-
+                <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e690553b11229b711c2486')">Lecture 1</button>
+                <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e690d43b11229b711c2487')">Lecture 2</button>
+                <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e691253b11229b711c2488')">Lecture 3</button>
+                <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6917b3b11229b711c2489')">Lecture 4</button>
+                <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e691973b11229b711c248a')">Lecture 5</button>
+                <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6947b3b11229b711c248e')">Lecture 6</button>
+                <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e692123b11229b711c248d')">Lecture 7</button>
+                <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e694f03b11229b711c248f')">Lecture 8</button>
             </div>
+
             <button onclick="showLectures('vector')">Vector</button>
 
 <div id="vector" class="lecture-buttons">
