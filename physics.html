@@ -5,29 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics - Team Delta Official</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Function to handle verification process
-        function verifyAccess() {
-            localStorage.setItem('verifiedTime', new Date().getTime()); // Set current time as verification time
-        }
-
-        // Function to check if the user has verified in the last 24 hours
-        function checkVerification() {
-            const lastVerified = localStorage.getItem('verifiedTime');
-            const currentTime = new Date().getTime();
-            return lastVerified && (currentTime - lastVerified) <= (24 * 60 * 60 * 1000);
-        }
-
-        // Function to handle redirection to verification
-        function handleClassButtonClick() {
-            if (!checkVerification()) {
-                localStorage.setItem('redirectAfterVerification', 'physics_class11.html'); // Store the target URL
-                window.location.href = "https://instantearn.in/PSX4"; // Redirect to the verification URL
-            } else {
-                window.location.href = 'physics_class11.html'; // Redirect to the target page
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -44,8 +21,8 @@
         <section id="classes">
             <h2>Select Your Class</h2>
             <div class="buttons">
-                <button onclick="handleClassButtonClick()">Class 11</button>
-                <button onclick="handleClassButtonClick()">Class 12</button>
+                <button onclick="location.href='physics_class11.html'">Class 11</button>
+                <button onclick="location.href='class12.html'">Class 12</button>
             </div>
         </section>
         <section id="tips">
@@ -73,5 +50,4 @@
         <p>© 2024 Team Delta Official</p>
     </footer>
 </body>
-    
 </html>
