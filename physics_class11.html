@@ -1,3 +1,5 @@
+
+</body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics Class 11</title>
     <style>
-        body {
+            body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -109,37 +111,10 @@
             bottom: 0;
         }
     </style>
-
-    <script>
-        // Check verification status
-        function checkVerification() {
-            const lastVerified = localStorage.getItem('lastVerified');
-            const currentTime = new Date().getTime();
-            const oneDay = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-
-            // If lastVerified is not set or it's been more than 24 hours, show a popup
-            if (!lastVerified || (currentTime - lastVerified) > oneDay) {
-                if (confirm("You are not verified! Please verify yourself to use this page.")) {
-                    window.location.href = "https://instantearn.in/aXNk"; // Redirect to your shortened link for verification
-                }
-            }
-        }
-
-        // Set verification timestamp in localStorage after successful verification
-        function setVerified() {
-            const currentTime = new Date().getTime();
-            localStorage.setItem('lastVerified', currentTime); // Store the current time as the last verified time
-        }
-
-        // Run verification check when the page loads
-        window.onload = function() {
-            checkVerification();
-        };
-    </script>
 </head>
 <body>
     <header>
-        <h1>ᴘʜʏsɪᴄs - ᴀʟʟᴇɴ</h1>
+        <h1>Physics - Allen</h1>
         <nav>
             <ul class="nav-line">
                 <li><a href="index.html">Home</a></li>
@@ -396,45 +371,38 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6b33a3b11229b711c2541')">Fluid mechanics 12</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6b3403b11229b711c2542')">Fluid mechanics 13</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6b3403b11229b711c2543')">Fluid mechanics 14</button>
-
-</div>
         </div>
     </main>
     <footer>
         © 2024 Physics Class 11
     </footer>
+
     <script>
         function showLectures(chapterId) {
-            // Hide all lecture buttons
             const lectureDivs = document.querySelectorAll('.lecture-buttons');
             lectureDivs.forEach(div => div.style.display = 'none');
-
-            // Show the selected chapter's lecture buttons
             document.getElementById(chapterId).style.display = 'flex';
         }
+
+        function verifyAccess() {
+            const lastVerified = localStorage.getItem('verifiedTimestamp');
+            const now = new Date().getTime();
+            const twentyFourHours = 24 * 60 * 60 * 1000;
+
+            if (!lastVerified || (now - lastVerified > twentyFourHours)) {
+                const shouldVerify = confirm("You need to verify to access this content. Would you like to verify now?");
+                if (shouldVerify) {
+                    // Redirect to shortened link for verification
+                    window.location.href = "https://instantearn.in/aXNk";
+                } else {
+                    // If user cancels, redirect to home page
+                    window.location.href = "index.html";
+                }
+            }
+        }
+
+        // Call verifyAccess function when the page loads
+        window.onload = verifyAccess;
     </script>
-        <section id="tips">
-            <h2>How to Clear JEE Main and Advanced</h2>
-            <p>Preparing for JEE Main and Advanced requires a strategic approach. Here are some tips to help you succeed:</p>
-            <ul>
-                <li>Follow a structured study plan and stick to it.</li>
-                <li>Focus on understanding concepts rather than rote learning.</li>
-                <li>Practice regularly with previous years' papers and mock tests.</li>
-                <li>Manage your time effectively during preparation and exams.</li>
-                <li>Stay consistent and avoid procrastination.</li>
-            </ul>
-            <h2>How to Cover Backlogs</h2>
-            <p>Backlogs can be challenging, but with the right strategy, you can overcome them:</p>
-            <ul>
-                <li>Identify the important topics and prioritize them.</li>
-                <li>Allocate specific time slots in your schedule to cover backlogs.</li>
-                <li>Use quality resources and focus on understanding the concepts.</li>
-                <li>Regularly revise and test yourself to ensure retention.</li>
-                <li>Stay motivated and avoid distractions.</li>
-            </ul>
-            <h3>This All Stream Link Made By Harshita So Thanks Her </h3> <li><a href="https://t.me/Team_Delta_Official/126" target="_blank">ᴛʜᴀɴᴋs ʜᴇʀ ʜᴇʀᴇ</a></li> <br> <br> <br>
-        </section>
-       
-    </main>
 </body>
-</html>
+</html></html>
