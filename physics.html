@@ -6,6 +6,11 @@
     <title>Physics - Team Delta Official</title>
     <link rel="stylesheet" href="styles.css">
     <script>
+        // Function to handle verification process
+        function verifyAccess() {
+            localStorage.setItem('verifiedTime', new Date().getTime()); // Set current time as verification time
+        }
+
         // Function to check if the user has verified in the last 24 hours
         function checkVerification() {
             const lastVerified = localStorage.getItem('verifiedTime');
@@ -13,20 +18,13 @@
             return lastVerified && (currentTime - lastVerified) <= (24 * 60 * 60 * 1000);
         }
 
-        // Function to handle the verification process
-        function handleVerificationRedirect(url) {
+        // Function to handle redirection to verification
+        function handleClassButtonClick() {
             if (!checkVerification()) {
-                // Show popup and redirect to verification link if not verified
-                const userConfirmed = confirm("You need to verify yourself to proceed. Click OK to verify.");
-                
-                if (userConfirmed) {
-                    // Redirect to the shortened link for verification
-                    localStorage.setItem('redirectAfterVerification', url);
-                    window.location.href = "https://instantearn.in/aXNk"; // Redirect to the shortened link for verification
-                }
+                localStorage.setItem('redirectAfterVerification', 'physics_class11.html'); // Store the target URL
+                window.location.href = "https://publicearn.com/RpBu"; // Redirect to the verification URL
             } else {
-                // Proceed to the requested page if already verified
-                location.href = url;
+                window.location.href = 'physics_class11.html'; // Redirect to the target page
             }
         }
     </script>
@@ -46,8 +44,8 @@
         <section id="classes">
             <h2>Select Your Class</h2>
             <div class="buttons">
-                <button onclick="handleVerificationRedirect('physics_class11.html')">Class 11</button>
-                <button onclick="handleVerificationRedirect('class12.html')">Class 12</button>
+                <button onclick="handleClassButtonClick()">Class 11</button>
+                <button onclick="handleClassButtonClick()">Class 12</button>
             </div>
         </section>
         <section id="tips">
