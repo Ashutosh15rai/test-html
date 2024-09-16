@@ -31,16 +31,25 @@
             localStorage.setItem('lastVerified', currentTime); // Save current time as verification time
         }
 
+        // Function to handle button clicks and verify access
+        function handleButtonClick(targetUrl) {
+            const lastVerified = localStorage.getItem('lastVerified');
+            const currentTime = new Date().getTime();
+
+            // Check if the user has verified within the last 24 hours
+            if (!lastVerified || currentTime - lastVerified > 24 * 60 * 60 * 1000) {
+                // Show popup and redirect to verification link
+                showNotVerifiedPopup();
+                window.location.href = 'https://instantearn.in/PSX4';
+            } else {
+                // If verified, navigate to the target URL
+                window.location.href = targetUrl;
+            }
+        }
+
         // Check verification status on page load
         window.onload = function() {
-            // Ensure user is not redirected if they have already verified within 24 hours
-            const lastVerified = localStorage.getItem('lastVerified');
-            if (lastVerified && new Date().getTime() - lastVerified <= 24 * 60 * 60 * 1000) {
-                // User is verified, do nothing
-                return;
-            }
-            // Otherwise, check verification
-            checkVerification();
+            checkVerification(); // Ensure user is verified when the page loads
         };
     </script>
 </head>
@@ -59,8 +68,8 @@
         <section id="classes">
             <h2>Select Your Class</h2>
             <div class="buttons">
-                <button onclick="verifyAccess(); location.href='physics_class11.html'">Class 11</button>
-                <button onclick="verifyAccess(); location.href='class12.html'">Class 12</button>
+                <button onclick="handleButtonClick('physics_class11.html')">Class 11</button>
+                <button onclick="handleButtonClick('class12.html')">Class 12</button>
             </div>
         </section>
         <section id="tips">
