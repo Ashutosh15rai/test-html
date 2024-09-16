@@ -9,13 +9,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333333;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333333; /* Dark gray text */
         }
 
         header {
-            background-color: #4A90E2;
-            color: #ffffff;
+            background-color: #4A90E2; /* Light blue */
+            color: #ffffff; /* White text */
             padding: 1rem 0;
             text-align: center;
         }
@@ -39,7 +39,7 @@
         }
 
         nav ul li a {
-            color: #ffffff;
+            color: #ffffff; /* White text */
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
@@ -48,7 +48,7 @@
         }
 
         nav ul li a:hover {
-            background-color: #357ABD;
+            background-color: #357ABD; /* Darker blue */
             border-radius: 5px;
         }
 
@@ -65,8 +65,8 @@
         }
 
         button {
-            background-color: #4A90E2;
-            color: #ffffff;
+            background-color: #4A90E2; /* Light blue */
+            color: #ffffff; /* White text */
             border: none;
             padding: 1rem;
             margin: 0.5rem 0;
@@ -75,11 +75,11 @@
             max-width: 300px;
             font-size: 1.2rem;
             transition: background-color 0.3s ease;
-            border-radius: 10px;
+            border-radius: 10px; /* Smooth edges */
         }
 
         button:hover {
-            background-color: #357ABD;
+            background-color: #357ABD; /* Darker blue */
         }
 
         .lecture-buttons {
@@ -91,83 +91,61 @@
         }
 
         .lecture-buttons button {
-            background-color: #333333;
-            color: #ffffff;
+            background-color: #333333; /* Dark gray */
+            color: #ffffff; /* White text */
         }
 
         .lecture-buttons button:hover {
-            background-color: #555555;
+            background-color: #555555; /* Lighter gray */
         }
 
         footer {
-            background-color: #4A90E2;
-            color: #ffffff;
+            background-color: #4A90E2; /* Light blue */
+            color: #ffffff; /* White text */
             text-align: center;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
-
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.4);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #ffffff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            position: relative;
-            text-align: center;
-        }
-
-        .modal-content p {
-            margin: 0;
-        }
-
-        .modal-button {
-            background-color: #4A90E2;
-            color: #ffffff;
-            border: none;
-            padding: 10px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .modal-button:hover {
-            background-color: #357ABD;
-        }
     </style>
+    <script>
+        // Function to check if the user has verified in the last 24 hours
+        function checkVerification() {
+            const lastVerified = localStorage.getItem('verifiedTime');
+            const currentTime = new Date().getTime();
+            return lastVerified && (currentTime - lastVerified) <= (24 * 60 * 60 * 1000);
+        }
+
+        // Redirect to the verification page if not verified
+        function redirectToVerification() {
+            if (!checkVerification()) {
+                window.location.href = "https://instantearn.in/aXNk";
+            }
+        }
+
+        // Check verification status on page load
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (!checkVerification()) {
+                redirectToVerification();
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
-        <h1>Physics - Allen</h1>
+        <h1>Physics Class 11</h1>
         <nav>
-            <ul class="nav-line">
+                        <ul class="nav-line">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="https://t.me/Team_Delta_Official" target="_blank">Telegram</a></li>
+                <li><a href="https://t.me/Team_Delta_Official" target="_blank"> Telegram </a></li>
                 <li><a href="https://t.me/Hii_Admin_Bot" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="buttons">
-                       <button onclick="showLectures('Unit Dimensions & Error')">Unit Dimensions & Error</button>
+                <div class="buttons">
+            <button onclick="showLectures('Unit Dimensions & Error')">Unit Dimensions & Error</button>
             <div id="Unit Dimensions & Error" class="lecture-buttons">
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e690553b11229b711c2486')">Units Dimensions And Error 1</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e690d43b11229b711c2487')">Units Dimensions And Error 2</button>
@@ -408,49 +386,43 @@
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6b3403b11229b711c2542')">Fluid mechanics 13</button>
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e6b3403b11229b711c2543')">Fluid mechanics 14</button>
 
+            </div>
         </div>
     </main>
-    <footer>
+   <footer>
         © 2024 Physics Class 11
     </footer>
-
-    <!-- Verification Modal -->
-    <div id="verificationModal" class="modal">
-        <div class="modal-content">
-            <p>You need to verify to access this content. Would you like to verify now?</p>
-            <button class="modal-button" id="verifyButton" onclick="verify()">Verify Now</button>
-        </div>
-    </div>
-
     <script>
         function showLectures(chapterId) {
+            // Hide all lecture buttons
             const lectureDivs = document.querySelectorAll('.lecture-buttons');
             lectureDivs.forEach(div => div.style.display = 'none');
+
+            // Show the selected chapter's lecture buttons
             document.getElementById(chapterId).style.display = 'flex';
         }
-
-        // Open verification page and disable the site content until verification is complete
-        function verify() {
-            const verificationUrl = 'https://instantearn.in/aXNk';
-            window.location.href = verificationUrl; // Opens the verification in the same tab
-            localStorage.setItem('verifiedTimestamp', new Date().getTime());
-        }
-
-        function checkVerification() {
-            const lastVerified = localStorage.getItem('verifiedTimestamp');
-            const now = new Date().getTime();
-            const twentyFourHours = 24 * 60 * 60 * 1000;
-
-            // Show modal if user hasn't verified or it's been more than 24 hours since last verification
-            if (!lastVerified || (now - lastVerified > twentyFourHours)) {
-                document.getElementById('verificationModal').style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.getElementById('verificationModal').style.display = 'none';
-            }
-        }
-
-        window.onload = checkVerification;
     </script>
+        <section id="tips">
+            <h2>How to Clear JEE Main and Advanced</h2>
+            <p>Preparing for JEE Main and Advanced requires a strategic approach. Here are some tips to help you succeed:</p>
+            <ul>
+                <li>Follow a structured study plan and stick to it.</li>
+                <li>Focus on understanding concepts rather than rote learning.</li>
+                <li>Practice regularly with previous years' papers and mock tests.</li>
+                <li>Manage your time effectively during preparation and exams.</li>
+                <li>Stay consistent and avoid procrastination.</li>
+            </ul>
+            <h2>How to Cover Backlogs</h2>
+            <p>Backlogs can be challenging, but with the right strategy, you can overcome them:</p>
+            <ul>
+                <li>Identify the important topics and prioritize them.</li>
+                <li>Allocate specific time slots in your schedule to cover backlogs.</li>
+                <li>Use quality resources and focus on understanding the concepts.</li>
+                <li>Regularly revise and test yourself to ensure retention.</li>
+                <li>Stay motivated and avoid distractions.</li>
+            </ul>
+            <h3>This All Stream Link Made By Harshita So Thanks Her </h3> <li><a href="https://t.me/Team_Delta_Official/126" target="_blank">ᴛʜᴀɴᴋs ʜᴇʀ ʜᴇʀᴇ</a></li> <br> <br> <br>
+        </section>
+       
 </body>
 </html>
