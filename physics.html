@@ -10,47 +10,23 @@
         function checkVerification() {
             const lastVerified = localStorage.getItem('verifiedTime');
             const currentTime = new Date().getTime();
-            
-            // If the user hasn't verified or it has been more than 24 hours, show the popup
-            if (!lastVerified || (currentTime - lastVerified) > (24 * 60 * 60 * 1000)) {
-                return false;
-            }
-            return true;
+            return lastVerified && (currentTime - lastVerified) <= (24 * 60 * 60 * 1000);
         }
 
         // Function to handle the verification process
-        function verifyUser() {
-            const userConfirmed = confirm("You need to verify yourself to proceed. Click OK to verify.");
-            
-            if (userConfirmed) {
-                window.location.href = "https://instantearn.in/aXNk"; // Redirect to the shortened link for verification
+        function handleVerificationRedirect(url) {
+            if (!checkVerification()) {
+                // Show popup and redirect to verification link if not verified
+                const userConfirmed = confirm("You need to verify yourself to proceed. Click OK to verify.");
+                
+                if (userConfirmed) {
+                    // Redirect to the shortened link for verification
+                    localStorage.setItem('redirectAfterVerification', url);
+                    window.location.href = "https://instantearn.in/aXNk"; // Redirect to the shortened link for verification
+                }
             } else {
-                alert("You need to verify to access the content.");
-            }
-        }
-
-        // Function to handle navigation to the Class 11 page
-        function goToClass11() {
-            if (checkVerification()) {
-                // If verified within 24 hours, allow navigation
-                window.location.href = 'physics_class11.html';
-            } else {
-                // Otherwise, show the verification popup
-                verifyUser();
-            }
-        }
-
-        // When the user returns from the verification link, mark them as verified
-        function setVerified() {
-            const currentTime = new Date().getTime();
-            localStorage.setItem('verifiedTime', currentTime); // Store the current time as the verification time
-        }
-
-        // If the URL contains 'verified=true', set the user as verified
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('verified') === 'true') {
-                setVerified();
+                // Proceed to the requested page if already verified
+                location.href = url;
             }
         }
     </script>
@@ -70,8 +46,8 @@
         <section id="classes">
             <h2>Select Your Class</h2>
             <div class="buttons">
-                <button onclick="goToClass11()">Class 11</button>
-                <button onclick="location.href='class12.html'">Class 12</button>
+                <button onclick="handleVerificationRedirect('physics_class11.html')">Class 11</button>
+                <button onclick="handleVerificationRedirect('class12.html')">Class 12</button>
             </div>
         </section>
         <section id="tips">
