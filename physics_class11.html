@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics Class 11</title>
     <style>
-        body {
+  body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -117,18 +117,16 @@
             return lastVerified && (currentTime - lastVerified) <= (24 * 60 * 60 * 1000);
         }
 
-        // Redirect to the verification page if not verified
-        function redirectToVerification() {
+        // Function to handle redirection if not verified
+        function redirectToHomeIfNotVerified() {
             if (!checkVerification()) {
-                window.location.href = "https://king-nomis.github.io/physics_class11.html";
+                window.location.href = 'index.html'; // Redirect to home if not verified
             }
         }
 
         // Check verification status on page load
         document.addEventListener('DOMContentLoaded', (event) => {
-            if (!checkVerification()) {
-                redirectToVerification();
-            }
+            redirectToHomeIfNotVerified();
         });
     </script>
 </head>
@@ -136,7 +134,7 @@
     <header>
         <h1>Physics Class 11</h1>
         <nav>
-                        <ul class="nav-line">
+                                    <ul class="nav-line">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="https://t.me/Team_Delta_Official" target="_blank"> Telegram </a></li>
                 <li><a href="https://t.me/Hii_Admin_Bot" target="_blank">Contact</a></li>
@@ -144,7 +142,7 @@
         </nav>
     </header>
     <main>
-                <div class="buttons">
+                        <div class="buttons">
             <button onclick="showLectures('Unit Dimensions & Error')">Unit Dimensions & Error</button>
             <div id="Unit Dimensions & Error" class="lecture-buttons">
 <button onclick="window.open('https://filestream6908-1637e8b865f4.herokuapp.com/watch/66e690553b11229b711c2486')">Units Dimensions And Error 1</button>
@@ -388,41 +386,10 @@
 
             </div>
         </div>
+        
     </main>
-   <footer>
-        © 2024 Physics Class 11
+    <footer>
+        <p>© 2024 Team Delta Official</p>
     </footer>
-    <script>
-        function showLectures(chapterId) {
-            // Hide all lecture buttons
-            const lectureDivs = document.querySelectorAll('.lecture-buttons');
-            lectureDivs.forEach(div => div.style.display = 'none');
-
-            // Show the selected chapter's lecture buttons
-            document.getElementById(chapterId).style.display = 'flex';
-        }
-    </script>
-        <section id="tips">
-            <h2>How to Clear JEE Main and Advanced</h2>
-            <p>Preparing for JEE Main and Advanced requires a strategic approach. Here are some tips to help you succeed:</p>
-            <ul>
-                <li>Follow a structured study plan and stick to it.</li>
-                <li>Focus on understanding concepts rather than rote learning.</li>
-                <li>Practice regularly with previous years' papers and mock tests.</li>
-                <li>Manage your time effectively during preparation and exams.</li>
-                <li>Stay consistent and avoid procrastination.</li>
-            </ul>
-            <h2>How to Cover Backlogs</h2>
-            <p>Backlogs can be challenging, but with the right strategy, you can overcome them:</p>
-            <ul>
-                <li>Identify the important topics and prioritize them.</li>
-                <li>Allocate specific time slots in your schedule to cover backlogs.</li>
-                <li>Use quality resources and focus on understanding the concepts.</li>
-                <li>Regularly revise and test yourself to ensure retention.</li>
-                <li>Stay motivated and avoid distractions.</li>
-            </ul>
-            <h3>This All Stream Link Made By Harshita So Thanks Her </h3> <li><a href="https://t.me/Team_Delta_Official/126" target="_blank">ᴛʜᴀɴᴋs ʜᴇʀ ʜᴇʀᴇ</a></li> <br> <br> <br>
-        </section>
-       
 </body>
 </html>
