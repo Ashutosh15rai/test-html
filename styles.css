@@ -12,6 +12,20 @@ header {
     padding: 1rem 0;
     text-align: center;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333333; /* Dark gray text */
+}
+
+header {
+    background-color: #4A90E2; /* Light blue */
+    color: #ffffff; /* White text */
+    padding: 1rem 0;
+    text-align: center;
+}
 
 nav {
     display: flex;
